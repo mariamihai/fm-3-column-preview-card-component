@@ -1,112 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 
 :root {
-    --primary-bright-orange: hsl(31, 77%, 52%);
-    --primary-dark-cyan: hsl(184, 100%, 22%);
-    --primary-very-dark-cyan: hsl(179, 100%, 13%);
-    --primary-transparent-white: hsla(0, 0%, 100%, 0.75);
-    --primary-very-light-gray: hsl(0, 0%, 95%);
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --primary-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --primary-very-light-gray: hsl(0, 0%, 95%);
 }
 
 body {
-    position: relative;
-    margin: 0;
-    font-family: "Lexend Deca";
-    font-size: 15px;
+  position: relative;
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-size: 15px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    margin: 4em 2em 0em 2em;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 4em 2em 0em 2em;
+  padding-bottom: 50px;
+
+  h1 {
+    margin: 0;
+  }
+  bottom {
+    margin: 0;
+  }
+
+  .component {
+    padding: 3em;
 
     h1 {
-        margin: 0;
-    }
-    bottom {
-        margin: 0
-    };
-
-    .component {
-        padding: 3em;
-
-        h1 {
-            font-family: "Big Shoulders Display";
-            text-transform: uppercase;
-            padding: 1em 0;
-            color: var(--primary-very-light-gray);
-
-        }
-
-        .description {
-            color: var(--primary-transparent-white);
-            padding-bottom: 1em;
-        }
-
-        button {
-            cursor: pointer;
-            border-radius: 5em;
-            padding: 1em 2em;
-            font-weight: bold;
-        }
+      font-family: "Big Shoulders Display";
+      text-transform: uppercase;
+      padding: 1em 0;
+      color: var(--primary-very-light-gray);
     }
 
-    .sedans {
-        background-color: var(--primary-bright-orange);
-        border-radius: 0.5em 0.5em 0 0;
-
-        button {
-            border: 5px solid var(--primary-bright-orange);
-            color: var(--primary-bright-orange);  
-        }
+    .description {
+      color: var(--primary-transparent-white);
+      padding-bottom: 1em;
     }
 
-    .suvs {
-        background-color: var(--primary-dark-cyan);
-
-        button {
-            border: 5px solid var(--primary-dark-cyan);
-            color: var(--primary-dark-cyan);  
-        }
+    button {
+      cursor: pointer;
+      border-radius: 5em;
+      padding: 1em 2em;
+      font-weight: bold;
     }
+  }
 
-    .luxury {
-        background-color: var(--primary-very-dark-cyan);
-        border-radius: 0 0 0.5em 0.5em;
+  .sedans {
+    background-color: var(--primary-bright-orange);
+    border-radius: 0.5em 0.5em 0 0;
 
-        button {
-            border: 5px solid var(--primary-very-dark-cyan);
-            color: var(--primary-very-dark-cyan);  
-        }
+    button {
+      border: 5px solid var(--primary-bright-orange);
+      color: var(--primary-bright-orange);
     }
+  }
+
+  .suvs {
+    background-color: var(--primary-dark-cyan);
+
+    button {
+      border: 5px solid var(--primary-dark-cyan);
+      color: var(--primary-dark-cyan);
+    }
+  }
+
+  .luxury {
+    background-color: var(--primary-very-dark-cyan);
+    border-radius: 0 0 0.5em 0.5em;
+
+    button {
+      border: 5px solid var(--primary-very-dark-cyan);
+      color: var(--primary-very-dark-cyan);
+    }
+  }
 }
 
 .attribution {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 25px;
+  padding: 1em 1.5em 3em 1.5em;
+  height: 40px;
+  background-color: var(--primary-dark-cyan);
+  border-radius: 2em 0 4em 0;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-transparent-white);
+  }
+
+  img {
+    padding-left: 1em;
+  }
 }
 
+@media only screen and (min-width: 400px) {
+  .attribution {
+    padding: 1em 1.5em 3em 1.5em;
+    position: absolute;
+    right: 0;
+    max-width: 350px;
+    height: 25px;
+    border-radius: 2em 0 4em 0;
 
+    img {
+      padding-left: 1em;
+    }
+  }
+}
 
 @media only screen and (min-width: 700px) {
+  .card {
+    flex-direction: row;
+    margin: 6em 4em 0em 4em;
 
-    .card {
-        flex-direction: row;
-        margin: 6em 4em 0em 4em;
-
-
-        .sedans {
-            border-radius: 0.5em 0 0 0.5em ;
-        }
-
-        .suvs {
-        }
-
-        .luxury {
-            border-radius: 0 0.5em 0.5em 0;
-        }
+    .sedans {
+      border-radius: 0.5em 0 0 0.5em;
     }
+
+    .suvs {
+    }
+
+    .luxury {
+      border-radius: 0 0.5em 0.5em 0;
+    }
+  }
 }
