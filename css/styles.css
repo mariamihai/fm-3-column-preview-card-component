@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --primary-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --primary-very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-size: 15px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4em 2em 0em 2em;
+  padding-bottom: 50px;
+}
+
+.card h1 {
+  margin: 0;
+}
+
+.card bottom {
+  margin: 0;
+}
+
+.card .component {
+  padding: 3em;
+}
+
+.card .component h1 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  padding: 1em 0;
+  color: var(--primary-very-light-gray);
+}
+
+.card .component .description {
+  color: var(--primary-transparent-white);
+  padding-bottom: 1em;
+}
+
+.card .component button {
+  cursor: pointer;
+  border-radius: 5em;
+  padding: 1em 2em;
+  font-weight: bold;
+}
+
+.card .sedans {
+  background-color: var(--primary-bright-orange);
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.card .sedans button {
+  border: 5px solid var(--primary-bright-orange);
+  color: var(--primary-bright-orange);
+}
+
+.card .suvs {
+  background-color: var(--primary-dark-cyan);
+}
+
+.card .suvs button {
+  border: 5px solid var(--primary-dark-cyan);
+  color: var(--primary-dark-cyan);
+}
+
+.card .luxury {
+  background-color: var(--primary-very-dark-cyan);
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.card .luxury button {
+  border: 5px solid var(--primary-very-dark-cyan);
+  color: var(--primary-very-dark-cyan);
+}
+
+.attribution {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 25px;
+}
+
+@media only screen and (min-width: 700px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 6em 4em 0em 4em;
+  }
+  .card .sedans {
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  .card .luxury {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
